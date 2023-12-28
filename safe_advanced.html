@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <title>DIC cafe</title>
     <meta charset="utf-8">
-    <link href="css/nomalize.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/design.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header_nav">
       <nav class="header_nav">
-        <a href="index.html" class="logo"><img src="images/sample_logo_k.png"></a>
+        <a href="#" class="logo"><img src="images/sample_logo_k.png"></a>
         <ul class="global_nav">
-          <a href="index.html" class="global_nav_item">
+          <a href="#" class="global_nav_item">
             <li>Home</li>
           </a>
-          <a href="blueberry_pancakes.html" class="global_nav_item">
+          <a href="#" class="global_nav_item">
             <li>Menu</li>
           </a>
-          <a href="contact.html" class="global_nav_item">
+          <a href="#" class="global_nav_item">
             <li>Contact</li>
           </a>
         </ul>
@@ -76,39 +74,44 @@
       </ul>
     </section>
 
-     <section class="section_inner">
+    <section class="section_inner">
       <h2>ご注文</h2>
-      <form>
-        <p>商品を選択してください</p>
-        <div>
-          <select id="product" required>
-            <option hidden value="0">選択してください</option>
-            <option value="1">オリジナルブレンド200g 500円</option>
-            <option value="2">オリジナルブレンド500g 900円</option>
-            <option value="3">スペシャルブレンド200g 700円</option>
-            <option value="4">スペシャルブレンド500g 1200円</option>
-          </select>
-          <p>数量を選択してください</p>
-          <input type="number" min="1" max="5" id="number" required>
-        </div>
-        <br>
-        <input type="button" class="btn" value="追加する" onclick="calc()">
-        <input type="button" class="btn" value="合計金額" onclick="add()">
-      </form>
+     <form>
+          <label for="product">S’il vous plaît sélectionner un produit</label>
+          <div>
+            <select id="product" required>
+              <option hidden value="0">S’il vous plaît sélectionner</option>
+              <option id="1">Mélange original 200g 500 yens</option>
+              <option id="2">Mélange original 500g 700 yens</option>
+              <option id="3">Mélange spécial 200g 900 yens</option>
+              <option id="4">Mélange spécial 500g 1200 yens</option>
+            </select>
+            <p>Choisissez votre quantité</p>
+            <input type="number" min="1" max="5" id="number" required />
+          </div>
+          <br />
+          <input type="button" class="btn" value="Ajouter" onclick="add()" />
+          <input
+            type="button"
+            class="btn"
+            value="Prix total"
+            onclick="calc()"
+          />
+        </form>
     </section>
     <footer class="footer">
       <nav>
         <ul class="footer_nav">
-          <a href="index.html" class="footer_nav_item">
+          <a href="#" class="footer_nav_item">
             <li>Home</li>
           </a>
-          <a href="blueberry_pancakes.html" class="footer_nav_item">
+          <a href="#" class="footer_nav_item">
             <li>Menu</li>
           </a>
-          <a href="contact.html" class="footer_nav_item">
+          <a href="#" class="footer_nav_item">
             <li>Contact</li>
           </a>
-          <a href="contact.html" class="footer_nav_item">
+          <a href="#" class="footer_nav_item">
             <li>
               <img src="images/sample_logo_w.png" class="footer_logo">
             </li>
@@ -117,18 +120,6 @@
       </nav>
       <p class="footer_right">© DIVE INTO CODE Corp. All RIGHTS RESERVED.</p>
     </footer>
-    <style>
-      .btn {
-        display: inline-block;
-        padding: .8rem 2rem;
-        z-index: 10;
-        text-align: center;
-        border-radius: 5px;
-        background: rgba(127,136,182,1);
-        color: white;
-      }
-    </style>
-   
+    <script src="gestion2.js"> </script>
   </body>
-  <script src="gestion2.js"></script>
 </html>
